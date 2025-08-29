@@ -1,4 +1,4 @@
-{% extends "layouts/main.html" %}
+{% extends "layouts/branded.html" %}
 
 {% set pageName="Home" %}
 
@@ -8,18 +8,17 @@
   <div class="govuk-grid-column-two-thirds">
 
     {% include "govuk-prototype-kit/includes/homepage-top.njk" %}
-
-    <h1 class="govuk-heading-xl">
-      {{ serviceName }}
-    </h1>
     <h2 class="govuk-heading-m">Versions</h2>
 
+    <ul class="govuk-list">
+      <li>
+        <a class="govuk-link" href="mvp/claims-overview">MVP</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="mvp-unbranded/start-new-claim">MVP Unbranded</a>
+      </li>
+    </ul>
 
-      {{ govukButton({
-          text: "Continue",
-          href: "mvp/start-new-claim"
-        }) }}
-    {% include "govuk-prototype-kit/includes/homepage-bottom.njk" %}
   </div>
 </div>
 

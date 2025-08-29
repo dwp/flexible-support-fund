@@ -1,4 +1,4 @@
-{% extends "layouts/branded.html" %}
+{% extends "layouts/unbranded.html" %}
 
 {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
 {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
@@ -16,7 +16,7 @@
 }}
 {{ govukBackLink({
   text: "Back",
-  href: "claims-overview" })
+  href: "../" })
 }}
 
 <div class="govuk-grid-row">

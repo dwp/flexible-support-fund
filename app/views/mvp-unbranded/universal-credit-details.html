@@ -1,4 +1,4 @@
-{% extends "layouts/branded.html" %}
+{% extends "layouts/unbranded.html" %}
 
 {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
 {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
@@ -15,15 +15,6 @@
 }}
 
 {% block content %}
-
-{{ govukPhaseBanner({
-  tag: { text: "Alpha" },
-  html: 'This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback (opens in new tab).</a>.' })
-}}
-{{ govukBackLink({
-  text: "Back",
-  href: "customer-details" })
-}}
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
