@@ -2,7 +2,7 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: prototype.interface.flexible-support-fund-prototype
-  title: flexible-support-fund-prototype
+  title: Flexible-Support-Fund-Prototype
   description: |
     TODO: add description for flexible-support-fund-prototype.
 
