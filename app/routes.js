@@ -56,6 +56,14 @@ router.post('/submit-item', function (req, res) {
     res.redirect('/prototypes/conditional-content/add-item/pick-travel');
   } else if (choice === 'Tools and equipment') {
     res.redirect('/prototypes/conditional-content/add-item/pick-equipment');
+  } else if (choice === 'Identification') {
+    res.redirect('/prototypes/conditional-content/add-item/identification-details');
+  } else if (choice === 'Accommodation') {
+    res.redirect('/prototypes/conditional-content/add-item/accommodation-details');
+  } else if (choice === 'Something else') {
+    res.redirect('/prototypes/conditional-content/add-item/other-details');
+  } else {
+    res.redirect('/prototypes/conditional-content/add-item/standard-details');
   }
 });
 
