@@ -47,3 +47,27 @@ router.use('/', (req, res, next) => {
 
 
   // Add your routes here
+
+router.post('/submit-item', function (req, res) {
+  const choice = req.body['pickItem'];
+  req.session.data['pickItem'] = choice;
+
+  if (choice === 'Travel') {
+    res.redirect('/prototypes/conditional-content/add-item/pick-travel');
+  } else if (choice === 'Tools and equipment') {
+    res.redirect('/prototypes/conditional-content/add-item/pick-equipment');
+  }
+});
+
+router.post('/submit-travel', function (req, res) {
+  const choice = req.body['travel'];
+  req.session.data['travel'] = choice;
+
+  if (choice === 'Season ticket') {
+    res.redirect('/prototypes/conditional-content/add-item/season-ticket-details');
+  } else if (choice === 'Fuel') {
+    res.redirect('/prototypes/conditional-content/add-item/fuel-details');
+  } else {
+    res.redirect('/prototypes/conditional-content/add-item/travel-details');
+  }
+});

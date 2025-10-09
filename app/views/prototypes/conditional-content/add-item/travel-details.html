@@ -1,0 +1,22 @@
+{% extends "layouts/conditional-content-layout.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <span class="govuk-caption-l">Supplier</span>
+    <h1 class="govuk-heading-l">
+      Travel details
+    </h1>
+
+    <p class="govuk-body">
+      {{ data['travel'] }}
+    </p>
+
+  </div>
+</div>
+
+{% endblock %}
