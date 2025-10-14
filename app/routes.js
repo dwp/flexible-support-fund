@@ -79,3 +79,16 @@ router.post('/submit-travel', function (req, res) {
     res.redirect('/prototypes/conditional-content/add-item/travel-details');
   }
 });
+
+router.post('/zero-texts-pick-item', function (req, res) {
+  const choice = req.body['pickItem'];
+  req.session.data['pickItem'] = choice;
+
+  if (choice === 'Travel') {
+    res.redirect('/prototypes/zero-free-texts/pick-travel');
+  } else if (choice === 'Tools and equipment') {
+    res.redirect('/prototypes/zero-free-texts/pick-equipment');
+  } else {
+    res.redirect('/prototypes/zero-free-texts/standard-item');
+  }
+});

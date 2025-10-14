@@ -9,7 +9,7 @@
 
     <span class="govuk-caption-l">Supplier</span>
     <h1 class="govuk-heading-l">
-      Item details - {{ data['pickItem'] }}
+      {{ data['pickItem'] }} details
     </h1>
 
     <div class="govuk-form-group">
@@ -63,6 +63,16 @@
         <div class="govuk-input__prefix" aria-hidden="true">£</div>
         <input class="govuk-input govuk-input--width-5" id="item-cost" name="item-cost" type="text" spellcheck="false">
       </div>
+    </div>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="more-detail">
+        More information
+      </label>
+      <div id="more-detail-hint" class="govuk-hint">
+        Include any information that supports the claim or explain expensive costs
+      </div>
+      <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
     </div>
 
     <div class="govuk-button-group">
