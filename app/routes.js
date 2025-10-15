@@ -26,16 +26,16 @@ router.use((req, res, next) => {
 
 // This code shows in the terminal what page you are on and what the previous page was.
 router.use('/', (req, res, next) => {  
-    res.locals.currentURL = req.originalUrl; //current screen  
-    res.locals.prevURL = req.get('Referrer'); // previous screen
+  res.locals.currentURL = req.originalUrl; //current screen  
+  res.locals.prevURL = req.get('Referrer'); // previous screen
   
   console.log('folder : ' + res.locals.folder + ', subfolder : ' + res.locals.subfolder  );
   
-    next();  
-  });
+  next();  
+});
 
-  // Routing for the example journey. 
-  router.post('/country-answer', function(request, response) {
+// Routing for the example journey. 
+router.post('/country-answer', function(request, response) {
 
     var country = request.session.data['country']
     if (country == "England"){
@@ -46,8 +46,8 @@ router.use('/', (req, res, next) => {
 })
 
 
-  // Add your routes here
-  router.post('/submit-reason', function (req, res) {
+// Add your routes here
+router.post('/submit-reason', function (req, res) {
   const choice = req.body['claimReason'];
   req.session.data['claimReason'] = choice;
  
