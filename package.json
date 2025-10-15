@@ -8,14 +8,10 @@
     "@dwp/dwp-frontend": "3.3.0",
     "@govuk-prototype-kit/common-templates": "2.0.1",
     "@govuk-prototype-kit/step-by-step": "2.2.3",
-    "axios": "^1.12.2",
-    "express": "^5.1.0",
     "find-an-address-plugin": "github:dwp/find-an-address-plugin",
-    "form-data": "^4.0.4",
     "govuk-frontend": "5.11.1",
     "govuk-prototype-kit": "13.18.0",
     "jquery": "3.7.1",
-    "notifications-node-client": "8.2.1",
-    "tmp": "^0.2.5"
+    "notifications-node-client": "8.2.1"
   }
 }

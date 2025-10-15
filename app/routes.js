@@ -47,48 +47,34 @@ router.use('/', (req, res, next) => {
 
 
   // Add your routes here
-
-router.post('/submit-item', function (req, res) {
-  const choice = req.body['pickItem'];
-  req.session.data['pickItem'] = choice;
-
-  if (choice === 'Travel') {
-    res.redirect('/prototypes/conditional-content/add-item/pick-travel');
-  } else if (choice === 'Tools and equipment') {
-    res.redirect('/prototypes/conditional-content/add-item/pick-equipment');
-  } else if (choice === 'Identification') {
-    res.redirect('/prototypes/conditional-content/add-item/identification-details');
-  } else if (choice === 'Accommodation') {
-    res.redirect('/prototypes/conditional-content/add-item/accommodation-details');
+  router.post('/submit-reason', function (req, res) {
+  const choice = req.body['claimReason'];
+  req.session.data['claimReason'] = choice;
+ 
+  if (choice === 'Employment') {
+    res.redirect('/prototypes/conditional-content/claim-reason/pick-employment');
+  } else if (choice === 'Self-employment start') {
+    res.redirect('/prototypes/conditional-content/claim-reason/self-employment-details');
+  } else if (choice === 'Training course') {
+    res.redirect('/prototypes/conditional-content/claim-reason/training-course-details');
+  } else if (choice === 'Jobcentre Plus appointment') {
+    res.redirect('/prototypes/conditional-content/claim-reason/jobcentre-appointment-details');
+  } else if (choice === 'Job search support') {
+    res.redirect('/prototypes/conditional-content/claim-reason/job-search-details');
   } else if (choice === 'Something else') {
-    res.redirect('/prototypes/conditional-content/add-item/other-details');
+    res.redirect('/prototypes/conditional-content/claim-reason/other-details');
   } else {
-    res.redirect('/prototypes/conditional-content/add-item/standard-details');
+    res.redirect('/prototypes/conditional-content/claim-reason/programme-details');
   }
 });
 
-router.post('/submit-travel', function (req, res) {
-  const choice = req.body['travel'];
-  req.session.data['travel'] = choice;
-
-  if (choice === 'Season ticket') {
-    res.redirect('/prototypes/conditional-content/add-item/season-ticket-details');
-  } else if (choice === 'Fuel') {
-    res.redirect('/prototypes/conditional-content/add-item/fuel-details');
+  router.post('/submit-reason-2', function (req, res) {
+  const choice = req.body['claimReason'];
+  req.session.data['claimReason'] = choice;
+ 
+  if (choice === 'Employment') {
+    res.redirect('/prototypes/zero-free-texts/pick-employment');
   } else {
-    res.redirect('/prototypes/conditional-content/add-item/travel-details');
-  }
-});
-
-router.post('/zero-texts-pick-item', function (req, res) {
-  const choice = req.body['pickItem'];
-  req.session.data['pickItem'] = choice;
-
-  if (choice === 'Travel') {
-    res.redirect('/prototypes/zero-free-texts/pick-travel');
-  } else if (choice === 'Tools and equipment') {
-    res.redirect('/prototypes/zero-free-texts/pick-equipment');
-  } else {
-    res.redirect('/prototypes/zero-free-texts/standard-item');
+    res.redirect('/prototypes/zero-free-texts/claim-details');
   }
 });
