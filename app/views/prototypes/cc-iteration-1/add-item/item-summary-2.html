@@ -159,7 +159,7 @@
                   To
                 </dt>
                 <dd class="govuk-summary-list__value">
-                  {{ data['travel-to'] }}
+                  {{ data['destination-location'] }}
                 </dd>
               </div>
               <div class="govuk-summary-list__row">
@@ -293,6 +293,52 @@
               </dt>
               <dd class="govuk-summary-list__value">
                 {{ data['moreDetail'] }}
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    {% endif %}
+
+    {% if data['pickItem'] == 'Training and materials' %}
+      <div class="govuk-summary-card">
+        <div class="govuk-summary-card__title-wrapper">
+          <h2 class="govuk-summary-card__title">
+            {{ data['item-name'] }}
+          </h2>
+          <ul class="govuk-summary-card__actions">
+            <li class="govuk-summary-card__action">
+              <a class="govuk-link" href="#">Delete<span class="govuk-visually-hidden"> {{ data['item-name'] }}</span></a>
+            </li>
+            <li class="govuk-summary-card__action">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> {{ data['item-name'] }}</span></a>
+            </li>
+          </ul>
+        </div>
+        <div class="govuk-summary-card__content">
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Category
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {{ data['pickItem'] }}
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Product code
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {{ data['product-code'] }}
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Cost
+              </dt>
+              <dd class="govuk-summary-list__value">
+                £{{ data['item-cost'] }}
               </dd>
             </div>
           </dl>
@@ -489,7 +535,7 @@
                   To
                 </dt>
                 <dd class="govuk-summary-list__value">
-                  {{ data['travel-to2'] }}
+                  {{ data['destination-location2'] }}
                 </dd>
               </div>
               <div class="govuk-summary-list__row">
@@ -623,6 +669,52 @@
               </dt>
               <dd class="govuk-summary-list__value">
                 {{ data['moreDetail2'] }}
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    {% endif %}
+
+        {% if data['pickItem2'] == 'Training and materials' %}
+      <div class="govuk-summary-card">
+        <div class="govuk-summary-card__title-wrapper">
+          <h2 class="govuk-summary-card__title">
+            {{ data['item-name2'] }}
+          </h2>
+          <ul class="govuk-summary-card__actions">
+            <li class="govuk-summary-card__action">
+              <a class="govuk-link" href="#">Delete<span class="govuk-visually-hidden"> {{ data['item-name2'] }}</span></a>
+            </li>
+            <li class="govuk-summary-card__action">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> {{ data['item-name2'] }}</span></a>
+            </li>
+          </ul>
+        </div>
+        <div class="govuk-summary-card__content">
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Category
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {{ data['pickItem2'] }}
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Product code
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {{ data['product-code2'] }}
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Cost
+              </dt>
+              <dd class="govuk-summary-list__value">
+                £{{ data['item-cost2'] }}
               </dd>
             </div>
           </dl>
