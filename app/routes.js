@@ -123,3 +123,91 @@ router.post('/zero-texts-pick-item', function (req, res) {
     res.redirect('/prototypes/zero-free-texts/standard-item');
   }
 });
+
+
+// Iteration 1
+
+router.post('/cc-1-submit-reason', function (req, res) {
+  const choice = req.body['claimReason'];
+  req.session.data['claimReason'] = choice;
+ 
+  if (choice === 'Employment') {
+    res.redirect('/prototypes/cc-iteration-1/claim-reason/pick-employment');
+  } else if (choice === 'Self-employment start') {
+    res.redirect('/prototypes/cc-iteration-1/claim-reason/self-employment-details');
+  } else if (choice === 'Training course') {
+    res.redirect('/prototypes/cc-iteration-1/claim-reason/training-course-details');
+  } else if (choice === 'Jobcentre Plus appointment') {
+    res.redirect('/prototypes/cc-iteration-1/claim-reason/jobcentre-appointment-details');
+  } else if (choice === 'Job search support') {
+    res.redirect('/prototypes/cc-iteration-1/claim-reason/job-search-details');
+  } else if (choice === 'Something else') {
+    res.redirect('/prototypes/cc-iteration-1/claim-reason/other-details');
+  } else {
+    res.redirect('/prototypes/cc-iteration-1/claim-reason/programme-details');
+  }
+});
+
+router.post('/cc-1-submit-item', function (req, res) {
+  const choice = req.body['pickItem'];
+  req.session.data['pickItem'] = choice;
+
+  if (choice === 'Travel') {
+    res.redirect('/prototypes/cc-iteration-1/add-item/pick-travel');
+  } else if (choice === 'Tools and equipment') {
+    res.redirect('/prototypes/cc-iteration-1/add-item/pick-equipment');
+  } else if (choice === 'Identification') {
+    res.redirect('/prototypes/cc-iteration-1/add-item/identification-details');
+  } else if (choice === 'Accommodation') {
+    res.redirect('/prototypes/cc-iteration-1/add-item/accommodation-details');
+  } else if (choice === 'Something else') {
+    res.redirect('/prototypes/cc-iteration-1/add-item/other-details');
+  } else {
+    res.redirect('/prototypes/cc-iteration-1/add-item/standard-details');
+  }
+});
+
+router.post('/cc-1-submit-travel', function (req, res) {
+  const choice = req.body['travel'];
+  req.session.data['travel'] = choice;
+
+  if (choice === 'Season ticket') {
+    res.redirect('/prototypes/cc-iteration-1/add-item/season-ticket-details');
+  } else if (choice === 'Fuel') {
+    res.redirect('/prototypes/cc-iteration-1/add-item/fuel-details');
+  } else {
+    res.redirect('/prototypes/cc-iteration-1/add-item/travel-details');
+  }
+});
+
+router.post('/cc-1-submit-item-2', function (req, res) {
+  const choice = req.body['pickItem2'];
+  req.session.data['pickItem2'] = choice;
+
+  if (choice === 'Travel') {
+    res.redirect('/prototypes/cc-iteration-1/add-item/add-item-2/pick-travel-2');
+  } else if (choice === 'Tools and equipment') {
+    res.redirect('/prototypes/cc-iteration-1/add-item/add-item-2/pick-equipment-2');
+  } else if (choice === 'Identification') {
+    res.redirect('/prototypes/cc-iteration-1/add-item/add-item-2/identification-details-2');
+  } else if (choice === 'Accommodation') {
+    res.redirect('/prototypes/cc-iteration-1/add-item/add-item-2/accommodation-details-2');
+  } else if (choice === 'Something else') {
+    res.redirect('/prototypes/cc-iteration-1/add-item/add-item-2/other-details-2');
+  } else {
+    res.redirect('/prototypes/cc-iteration-1/add-item/add-item-2/standard-details-2');
+  }
+});
+
+router.post('/cc-1-submit-travel-2', function (req, res) {
+  const choice = req.body['travel2'];
+  req.session.data['travel2'] = choice;
+
+  if (choice === 'Season ticket') {
+    res.redirect('/prototypes/cc-iteration-1/add-item/add-item-2/season-ticket-details-2');
+  } else if (choice === 'Fuel') {
+    res.redirect('/prototypes/cc-iteration-1/add-item/add-item-2/fuel-details-2');
+  } else {
+    res.redirect('/prototypes/cc-iteration-1/add-item/add-item-2/travel-details-2');
+  }
+});
